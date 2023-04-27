@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap')
+
+$background-color: #FDFDFD
+$header-background: #1E1E1E
+$header-color: #FFFFFF
+
+// sass --watch sass/style.sass style.css
+
+*
+    font-family: 'Source Sans Pro', sans-serif
+
+
+.overlay-copy
+    position: sticky
+    background-color: green
+    top: 0px
+    height: 40px
+    display: flex
+    align-items: center
+    justify-content: center
+    color: white
+    font-size: 18px
+    font-weight: 700
+    
+
+body
+    background-color: $background-color
+    height: 100vh
+    overflow-x: hidden
+
+.header-font
+    font-style: normal
+    font-weight: 700
+    font-size: 16px
+    line-height: 20px
+    text-transform: uppercase
+    color: #FFFFFF
+
+.hamburger-font
+    font-style: normal
+    font-weight: 700
+    font-size: 16px
+    line-height: 20px
+    text-transform: uppercase
+    color: #1E1E1E
+
+.hamburger
+    min-width: 100px
+    width: 100px
+    display: flex
+    justify-content: center
+    cursor: pointer
+
+.hamburger-active
+    width: 250px
+    min-width: 250px
+
+.header
+    padding-right: 87px
+    width: 100vw
+    height: 70px
+    background-color: $header-background
+    display: flex
+    align-items: center
+    &__container
+        width: 100%
+    &-nav
+        display: flex
+        align-items: center
+        height: 100%
+        &-active
+            padding-left: 100px
+
+        &__menu
+            display: flex
+            width: 100%
+            justify-content: center
+            align-items: center
+            height: 100%
+            li
+                &:first-child
+                    padding-left: 50px
+                    padding-right: 30px
+                &:nth-child(2)
+                    padding-left: 50px
+                    padding-right: 42px
+                &:nth-child(3)
+                    padding: 0px 36px
+                &:last-child
+                    padding-left: 50px
+                    padding-right: 47px
+    &__icons
+        display: flex
+        align-items: center
+        column-gap: 38.32px
+        height: 100%
+
+.icon-img
+    max-width: none
+    width: auto
+    height: 100%
+
+.container
+    // max-width: 1650px
+    height: 100%
+
+.main
+    display: flex
+    height: 100%
+    &-nav
+        background-color: #F7F7F7
+        min-width: 250px
+        width: 250px
+        padding: 53px 30px 0px 25px
+        &__menu
+            display: flex
+            flex-direction: column
+            row-gap: 10px
+            &-item
+                display: flex
+                align-items: center
+                flex-direction: column
+                justify-content: space-between
+                div
+                    width: 100%
+                    display: flex
+                    align-items: center
+                    justify-content: space-between
+                .subtext
+                    display: flex
+                    flex-direction: column
+                    align-items: flex-start
+                    padding-top: 7px
+                    padding-left: 15px
+                    font-weight: 400
+                    font-size: 14px
+                    line-height: 18px
+                    color: #404040
+                    margin-bottom: 5px
+    &__container
+        display: flex
+        flex-direction: column
+        row-gap: 60px
+        padding-right: 170px
+        padding-left: 100px
+        padding-top: 40px
+    &-section
+        display: flex
+        flex-direction: column
+        row-gap: 31px
+        &__title-wrapper
+            display: flex
+            justify-content: space-between
+            align-items: center
+        &__title
+            font-style: normal
+            font-weight: 700
+            font-size: 20px
+            line-height: 25px
+            color: #000000
+        &__description
+            font-style: normal
+            font-weight: 400
+            font-size: 16px
+            line-height: 20px
+            color: #404040
+
+.active
+    display: block !important
+
+.none
+    display: none !important
+
+.copy-icon
+    cursor: pointer
+
+.arrow
+    cursor: pointer
+
+@media only screen and (min-width: 100px) and (max-width: 540px)
+    .hamburger
+        width: auto
+        min-width: auto
+
+    .header
+        padding: 0px 70px 0px 28px
+        height: 70px
+        position: relative
+        &__icons
+            column-gap: 30px
+            flex-grow: 1
+        &__icon--blogger
+            flex-grow: 1
+            text-align: center
+        &-nav
+            position: absolute
+            display: flex
+            align-items: center
+            height: 100%
+            left: 50%
+            transform: translateX(-50%)
+            &-active
+                padding-left: 0px
+            &__menu
+                display: none
+                li
+                    &:first-child
+                        padding-left: 30px
+                        padding-right: 20px
+                    &:nth-child(2)
+                        padding-left: 30px
+                        padding-right: 30px
+                    &:nth-child(3)
+                        padding: 0px 25px
+                    &:last-child
+                        padding-left: 30px
+                        padding-right: 28px
+        &__icon
+            display: none
+
+    .main
+        &-nav
+            position: fixed
+            background-color: #F7F7F7
+            width: 100vw
+            height: 100vh
+            padding-right: 59px
+        &__menu
+            font-weight: 700
+            font-size: 16px
+            line-height: 20px
+            text-transform: uppercase
+            color: #1E1E1E
+            row-gap: 12.32px
+            
+
+        &__container
+            row-gap: 40px
+            padding: 30px 20px
+        &-section
+            row-gap: 21px
+            &__title
+                font-size: 24px
+                line-height: 30px
+            &--installation
+                padding-bottom: 20px
+
+@media only screen and (min-width: 541px) and (max-width: 768px)
+    .hamburger
+        width: auto
+        min-width: auto
+    .hamburger-active
+        width: auto
+        min-width: auto
+    .header
+        padding-left: 25px
+        padding-right: 0px
+        height: 70px
+        position: relative
+        &__icons
+            column-gap: 30px
+            flex-grow: 1
+        &__icon--blogger
+            flex-grow: 1
+            text-align: center
+        &-nav
+            position: absolute
+            display: flex
+            align-items: center
+            height: 100%
+            left: 50%
+            transform: translateX(-50%)
+            &-active
+                padding-left: 0px
+            &__menu
+                display: none
+                li
+                    &:first-child
+                        padding-left: 30px
+                        padding-right: 20px
+                    &:nth-child(2)
+                        padding-left: 30px
+                        padding-right: 30px
+                    &:nth-child(3)
+                        padding: 0px 25px
+                    &:last-child
+                        padding-left: 30px
+                        padding-right: 28px
+        &__icon
+            display: none
+
+    .main
+        &-nav
+            position: fixed
+            background-color: #F7F7F7
+            width: 100vw
+            height: 100vh
+            padding: 65px 60px 0px 25px
+        &__menu
+            font-weight: 700
+            font-size: 16px
+            line-height: 20px
+            text-transform: uppercase
+            color: #1E1E1E
+            row-gap: 12.32px
+        &__container
+            padding-left: 70px
+            padding-right: 70px
+
+@media only screen and (min-width: 769px) and (max-width: 1024px)
+
+    $adaptive-padding: 30px
+    $adaptive-hamburger: 180px
+    .hamburger-active
+        width: $adaptive-hamburger
+        min-width: $adaptive-hamburger
+    .header
+        padding-right: 70px
+        height: 70px
+        &-nav
+            &-active
+                padding-left: $adaptive-padding
+            &__menu
+                li
+                    &:first-child
+                        padding-left: 30px
+                        padding-right: 25px
+                    &:nth-child(2)
+                        padding-left: 30px
+                        padding-right: 25px
+                    &:nth-child(3)
+                        padding: 0px 25px
+                    &:last-child
+                        padding-left: 30px
+                        padding-right: 25px
+        &__icons
+            column-gap: 30px
+
+    .main
+        &__container
+            padding-right: 120px
+        &-nav
+            padding: 35px 10px 0px 15px
