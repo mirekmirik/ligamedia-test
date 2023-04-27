@@ -10,6 +10,12 @@ $header-color: #FFFFFF
     font-family: 'Source Sans Pro', sans-serif
 
 
+.scroll-off 
+    overflow: hidden
+
+.scroll-on
+    overflow: auto
+
 .overlay-copy
     position: sticky
     background-color: green
@@ -309,11 +315,18 @@ body
 
 @media only screen and (min-width: 769px) and (max-width: 1024px)
 
+
     $adaptive-padding: 30px
     $adaptive-hamburger: 180px
     .hamburger-active
         width: $adaptive-hamburger
         min-width: $adaptive-hamburger
+
+    .scroll-off
+        overflow: auto
+
+    
+
     .header
         padding-right: 70px
         height: 70px
@@ -341,3 +354,10 @@ body
             padding-right: 120px
         &-nav
             padding: 35px 10px 0px 15px
+
+
+@media only screen and (min-width: 1025px) and (max-width: 4000px)
+    .scroll-off
+        overflow-x: hidden
+        overflow-y: auto
+
